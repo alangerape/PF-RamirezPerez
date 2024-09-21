@@ -13,3 +13,39 @@
     filter: brightness(0.8); /* Oscurece ligeramente la imagen */
   }
 }
+
+/* Estilos específicos para cada imagen */
+.gallery-item-1 {
+  height: 400px;
+  background-image: url('../images/1.webp');
+}
+
+.gallery-item-2 {
+  height: 400px;
+  background-image: url('../images/2.webp');
+}
+
+.gallery-item-3 {
+  height: 400px;
+  background-image: url('../images/3.webp');
+}
+
+.gallery-item-4 {
+  height: 400px;
+  background-image: url('../images/4.webp');
+}
+
+.gallery-item-5 {
+  height: 400px;
+  background-image: url('../images/5.webp');
+}
+
+.gallery-item-6 {
+  height: 400px;
+  background-image: url('../images/6.webp');
+}
+
+.gallery-item-michi-info {
+  height: 300px;
+  background-image: url('../images/michi-info.webp');
+}
