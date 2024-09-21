@@ -1,0 +1,100 @@
+// Variables
+$background-color: #f9f9f9;
+$background-hover: #ececec;
+$form-background: #fff;
+$form-border-color: #ddd;
+$focus-border-color: #f7f6e4;
+$focus-box-shadow: rgba(247, 246, 228, 0.5);
+$button-bg-color: #f7f6e4;
+$button-hover-shadow: rgba(247, 246, 228, 0.5);
+
+// Contenedor del formulario
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    background: $background-color;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: $background-hover;
+    }
+
+    // Estilos del formulario
+    form {
+        font-family: 'Varela Round', sans-serif;
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        border: 1px solid $form-border-color;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: $form-background;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+    }
+}
+
+// Grupo del formulario
+.form-group {
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+
+    // Estilos de la etiqueta
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    // Inputs y textarea
+    input, 
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $form-border-color;
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:focus {
+            border-color: $focus-border-color;
+            box-shadow: 0 0 5px $focus-box-shadow;
+        }
+    }
+
+    // Textarea específico
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    // Botón
+    button {
+        background-color: $button-bg-color;
+        font-family: 'Varela Round', sans-serif;
+        color: #000;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            background-color: $button-bg-color;
+            box-shadow: 0 0 10px $button-hover-shadow;
+            transform: translateY(-3px);
+        }
+    }
+}

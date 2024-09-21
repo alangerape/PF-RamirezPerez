@@ -1,0 +1,677 @@
+@charset "UTF-8";
+/*Queries*/
+/* Formato general */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 0 10px;
+    height: 80px;
+  }
+  .header-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .menu-options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #f7f6e4;
+    text-align: center;
+    z-index: 999;
+    transition: transform 0.3s ease;
+  }
+  .menu-options.show {
+    display: flex;
+  }
+  .menu-options .option {
+    font-size: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .menu-options .option:hover {
+    color: #fff;
+    transform: translateX(10px);
+  }
+  .menu-options .option:last-child {
+    border-bottom: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .info-map-container {
+    flex-direction: column;
+  }
+  #info {
+    padding: 20px 0;
+  }
+  #info .info1,
+  #info .info2 {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+  }
+  #info .info2 span {
+    font-size: 18px;
+  }
+  #main-bg {
+    height: auto;
+    padding: 20px;
+  }
+  .bg-title {
+    font-size: 40px;
+  }
+  .description {
+    font-size: 25px;
+  }
+  #product-view {
+    padding: 0 30px;
+  }
+  #product-view .product-view-title {
+    font-size: 1.8em;
+  }
+  #product-view .product-title {
+    font-size: 25px;
+  }
+  #product-view .product-desc {
+    font-size: 20px;
+  }
+  #product-view .product-tbl td {
+    display: block;
+    width: 100%;
+  }
+  #product-view .product-img {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .info1,
+  .info2 {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .info1 .info2 span,
+  .info2 .info2 span {
+    font-size: 16px;
+  }
+  #main-bg {
+    height: auto;
+    padding: 10px;
+  }
+  .bg-title {
+    font-size: 35px;
+  }
+  .description {
+    font-size: 20px;
+  }
+  #product-view {
+    padding: 0 10px;
+  }
+  #product-view .product-view-title {
+    font-size: 1.5em;
+  }
+  #product-view .product-title {
+    font-size: 20px;
+  }
+  #product-view .product-desc {
+    font-size: 18px;
+  }
+  #product-view .product-tbl td {
+    display: block;
+    width: 100%;
+  }
+  #product-view .product-img {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  #info {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  #info .info1,
+  #info .info2 {
+    width: 90%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 40px;
+    height: auto;
+  }
+  #info .info2 {
+    margin-top: 0;
+    padding: 20px;
+  }
+  #info .info1 img {
+    width: 100%;
+    height: auto;
+  }
+  #info .info2 span {
+    font-size: 20px;
+  }
+  #main-bg {
+    height: auto;
+    padding: 30px;
+  }
+  .bg-title {
+    font-size: 50px;
+  }
+  .description {
+    font-size: 30px;
+  }
+  #product-view {
+    padding: 0 30px;
+  }
+  #product-view .product-view-title {
+    font-size: 2em;
+  }
+  #product-view .product-tbl td {
+    display: block;
+    text-align: center;
+  }
+  #product-view .product-img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  #product-view .product-title {
+    font-size: 30px;
+  }
+  #product-view .product-desc {
+    font-size: 22px;
+  }
+}
+/*HMTL*/
+/* Estilos base */
+#header {
+  width: 100%;
+  height: 100px;
+  background-color: #f7f6e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+#header:hover {
+  background-color: #e2e1cc;
+}
+
+.header-logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+.header-logo:hover {
+  transform: scale(1.1);
+}
+
+#header-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.menu-options {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+}
+.menu-options .option {
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Varela Round", sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.menu-options .option:hover {
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.menu-toggle:hover {
+  color: #fff;
+}
+
+/*Estilos footer*/
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.footer-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+#navbar-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-footer {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-footer li {
+  margin: 10px 0;
+  font-family: "Varela Round", sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu-footer li:hover {
+  transform: scale(1.05);
+  color: #7f7e76;
+}
+.menu-footer a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu-footer a:hover {
+  color: #7f7e76;
+  transform: translateX(5px);
+}
+
+.sm-icons {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+.sm-icons li {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.sm-icons li:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+.sm-icons li a {
+  color: #333;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sm-icons li a:hover {
+  color: #7f7e76;
+  transform: rotate(10deg);
+}
+
+/* SCSS Productos */
+#product-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px;
+  text-align: center;
+}
+#product-view .product-view-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+#product-view .product-view-title:hover {
+  color: #e2e1cc;
+}
+#product-view .product-tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+#product-view .product-tbl td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+#product-view .product-title {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  margin: 20px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+#product-view .product-title:hover {
+  color: #ff7f50;
+  transform: scale(1.05);
+}
+#product-view .product-desc {
+  margin: 20px 0;
+  font-size: 25px;
+  font-family: "Varela Round", sans-serif;
+  transition: color 0.3s ease;
+}
+#product-view .product-desc:hover {
+  color: #555;
+}
+#product-view .product-btn {
+  font-family: "Varela Round", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 80px;
+  padding: 10px 5px;
+  background-color: #f7f6e4;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+#product-view .product-btn:hover {
+  background-color: #e2e1cc;
+  transform: translateY(-5px);
+}
+#product-view .product-img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#product-view .product-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#product-view .card-img-top {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#product-view .img-bg-1 {
+  background-image: url("../../images/7.jpg") !important;
+}
+#product-view .img-bg-2 {
+  background-image: url("../../images/8.jpg");
+}
+#product-view .img-bg-3 {
+  background-image: url("../../images/9.jpg");
+}
+#product-view .img-bg-4 {
+  background-image: url("../../images/10.jpg");
+}
+#product-view .img-bg-5 {
+  background-image: url("../../images/11.jpg");
+}
+#product-view .img-bg-6 {
+  background-image: url("/images/13.jpg");
+}
+
+/* SCSS main */
+#main-bg {
+  width: 100%;
+  height: 1080px;
+  background-image: url("../Images/bg-1.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.bg-title {
+  color: #fff;
+  font-weight: 700;
+  font-family: "Varela Round", sans-serif;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.description {
+  font-size: 40px;
+  color: #fff;
+  font-family: "Varela Round", sans-serif;
+  max-width: 400px;
+}
+
+#info {
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info1 {
+  width: 600px;
+  height: 374px;
+  margin-right: -120px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.info1 img {
+  width: 600px;
+  height: auto;
+}
+
+.info2 {
+  width: 600px;
+  height: 374px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 200px;
+  margin-left: -120px;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.info2 span {
+  font-family: "Varela Round", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  background: #f9f9f9;
+  transition: background 0.3s ease;
+}
+#form-container:hover {
+  background: #ececec;
+}
+#form-container form {
+  font-family: "Varela Round", sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#form-container form:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f7f6e4;
+  box-shadow: 0 0 5px rgba(247, 246, 228, 0.5);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.form-group button {
+  background-color: #f7f6e4;
+  font-family: "Varela Round", sans-serif;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group button:hover {
+  background-color: #f7f6e4;
+  box-shadow: 0 0 10px rgba(247, 246, 228, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Galería */
+/* Estilos base para la galería */
+.gallery-item {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Efecto hover */
+}
+.gallery-item:hover {
+  transform: scale(1.05); /* Aumenta el tamaño de la imagen ligeramente */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+  filter: brightness(0.8); /* Oscurece ligeramente la imagen */
+}
+
+/* SCSS Mapa */
+.info-map-container {
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+.info-map-container:hover {
+  background-color: #ececec;
+}
+
+.info-column {
+  display: flex;
+  background-color: #f7f6e4;
+  border-radius: 8px;
+  border: solid #000;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.info-column:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.map-container {
+  flex: 1;
+  border: solid #000;
+  border-radius: 8px;
+  min-width: 300px;
+  height: 450px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.map-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  height: 450px;
+}
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
