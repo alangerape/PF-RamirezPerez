@@ -10,7 +10,7 @@
   .product-view-title {
     font-size: 2.5em;
     margin-bottom: 20px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Varela Round", sans-serif;
     font-weight: 700;
     transition: color 0.3s ease;
 
@@ -31,7 +31,7 @@
   }
 
   .product-title {
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Varela Round", sans-serif;
     font-weight: 700;
     font-size: 35px;
     margin: 20px 0;
@@ -46,7 +46,7 @@
   .product-desc {
     margin: 20px 0;
     font-size: 25px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Varela Round", sans-serif;
     transition: color 0.3s ease;
 
     &:hover {
@@ -55,7 +55,7 @@
   }
 
   .product-btn {
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Varela Round", sans-serif;
     font-size: 20px;
     font-weight: 600;
     border-radius: 80px;
@@ -71,7 +71,7 @@
   }
 
   .product-img {
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
@@ -89,26 +89,26 @@
   }
 
   .img-bg-1 {
-    background-image: url('../../images/7.jpg') !important;
+    background-image: url("../../images/7.webp") !important;
   }
 
   .img-bg-2 {
-    background-image: url('../../images/8.jpg');
+    background-image: url("../../images/8.webp");
   }
 
   .img-bg-3 {
-    background-image: url('../../images/9.jpg');
+    background-image: url("../../images/9.webp");
   }
 
   .img-bg-4 {
-    background-image: url('../../images/10.jpg');
+    background-image: url("../../images/10.webp");
   }
 
   .img-bg-5 {
-    background-image: url('../../images/11.jpg');
+    background-image: url("../../images/11.webp");
   }
 
   .img-bg-6 {
-    background-image: url('/images/13.jpg');
+    background-image: url("../../images/13.webp");
   }
 }

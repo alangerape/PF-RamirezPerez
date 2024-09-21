@@ -1,100 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/styles.css">    <!-- Verifica que la ruta sea correcta -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Verifica que la ruta sea correcta -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
     <header id="header">
-        <a href="../index.html"><img class="header-logo" src="/Images/logo-cats.png" alt="logo"></a>
-        <nav id="header-navbar">
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="menu-options">
-                <li><a class="option" href="../index.html">Inicio</a></li>
-                <li><a class="option" href="./pages/about.html">Nosotros</a></li>
-                <li><a class="option" href="../pages/products.html">Productos</a></li>
-                <li><a class="option" href="../pages/gallery.html">Galería</a></li>
-                <li><a class="option" href="../pages/contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>    
+      <a href="../index.html"
+        ><img class="header-logo" src="/Images/logo-cats.webp" alt="logo"
+      /></a>
+      <nav id="header-navbar">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="menu-options">
+          <li><a class="option" href="../index.html">Inicio</a></li>
+          <li><a class="option" href="./pages/about.html">Nosotros</a></li>
+          <li><a class="option" href="../pages/products.html">Productos</a></li>
+          <li><a class="option" href="../pages/gallery.html">Galería</a></li>
+          <li><a class="option" href="../pages/contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
-        <div id="info">
-            <div class="info1">
-                <img src="../images/michi-info.png" alt="michi-info">
-            </div>
-            <div class="info2">
-                <span>
-                    En Michi Shop, nos especializamos en proporcionar todo lo que tu michi necesita para vivir de manera feliz y saludable.
-                    Aquí encontrarás una amplia selección de productos, desde alimentos nutritivos hasta juguetes divertidos, rascadores, camas acogedoras y accesorios modernos. Cada detalle está pensado para que tu michi reciba el mejor cuidado y disfrute de cada momento.
-                    ¡Porque en Michi Shop, el bienestar de tu michi es nuestra prioridad!
-
-                 </span>
-            </div>
+      <div id="info">
+        <div class="info1">
+          <img src="../images/michi-info.webp" alt="michi-info" />
         </div>
-        <!-- Contenido aquí -->
-        <div id="form-container">
-            <form action="https://formspree.io/f/your_form_id" method="post">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
+        <div class="info2">
+          <span>
+            En Michi Shop, nos especializamos en proporcionar todo lo que tu
+            michi necesita para vivir de manera feliz y saludable. Aquí
+            encontrarás una amplia selección de productos, desde alimentos
+            nutritivos hasta juguetes divertidos, rascadores, camas acogedoras y
+            accesorios modernos. Cada detalle está pensado para que tu michi
+            reciba el mejor cuidado y disfrute de cada momento. ¡Porque en Michi
+            Shop, el bienestar de tu michi es nuestra prioridad!
+          </span>
         </div>
+      </div>
+      <!-- Contenido aquí -->
+      <div id="form-container">
+        <form action="https://formspree.io/f/your_form_id" method="post">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
     </main>
 
     <footer id="footer">
-        <div class="footer-column">
-            <a href="../index.html"><img class="header-logo" src="/Images/logo-cats.png" alt="logo"></a>
-        </div>
-        <div class="footer-column">
-            <nav id="navbar-footer">
-                <ul class="menu-footer">
-                    <li><a class="option" href="../index.html">Inicio</a></li>
-                    <li><a class="option" href=".   /pages/about.html">Nosotros</a></li>
-                    <li><a class="option" href="../pages/products.html">Productos</a></li>
-                    <li><a class="option" href="../pages/gallery.html">Galería</a></li>
-                    <li><a class="option" href="../pages/contact.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="footer-column">
-            <ul class="sm-icons">
-                <li><i class="fab fa-facebook-f" aria-hidden="true"></i></li>
-                <li><i class="fab fa-instagram" aria-hidden="true"></i></li>
-                <li><i class="fab fa-tiktok"></i></li>
-            </ul>
-        </div>
+      <div class="footer-column">
+        <a href="../index.html"
+          ><img class="header-logo" src="/Images/logo-cats.webp" alt="logo"
+        /></a>
+      </div>
+      <div class="footer-column">
+        <nav id="navbar-footer">
+          <ul class="menu-footer">
+            <li><a class="option" href="../index.html">Inicio</a></li>
+            <li><a class="option" href=".   /pages/about.html">Nosotros</a></li>
+            <li>
+              <a class="option" href="../pages/products.html">Productos</a>
+            </li>
+            <li><a class="option" href="../pages/gallery.html">Galería</a></li>
+            <li><a class="option" href="../pages/contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-column">
+        <ul class="sm-icons">
+          <li><i class="fab fa-facebook-f" aria-hidden="true"></i></li>
+          <li><i class="fab fa-instagram" aria-hidden="true"></i></li>
+          <li><i class="fab fa-tiktok"></i></li>
+        </ul>
+      </div>
     </footer>
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const menuOptions = document.querySelector('.menu-options');
-            menuOptions.classList.toggle('show');
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          const menuOptions = document.querySelector(".menu-options");
+          menuOptions.classList.toggle("show");
         });
-    </script> 
-</body>
+    </script>
+  </body>
 </html>

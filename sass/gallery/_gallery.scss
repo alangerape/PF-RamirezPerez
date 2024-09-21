@@ -1,16 +1,15 @@
 /* Galería */
 /* Estilos base para la galería */
 .gallery-item {
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    /* Efecto hover */
-    &:hover {
-      transform: scale(1.05); /* Aumenta el tamaño de la imagen ligeramente */
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra */
-      filter: brightness(0.8); /* Oscurece ligeramente la imagen */
-    }
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Efecto hover */
+  &:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen ligeramente */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+    filter: brightness(0.8); /* Oscurece ligeramente la imagen */
   }
-  
+}
