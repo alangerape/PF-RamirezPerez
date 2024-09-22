@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
   </head>
   <body>
@@ -39,6 +40,7 @@
     <main>
       <!-- Contenido principal -->
       <div id="main-bg">
+        <div class="animate__animated animate__fadeInDownBig">
         <h2 class="bg-title">Michi Shop</h2>
         <div class="content">
           <p class="description">
@@ -50,20 +52,27 @@
           </p>
         </div>
       </div>
+      </div>
       <div id="info">
-        <div class="info1">
-          <img src="Images/michi-info.webp" alt="michi-info" />
+        <div class="info1-container">
+          <div class="info1">
+            <img src="Images/michi-info.webp" alt="michi-info" />
+          </div>
         </div>
-        <div class="info2">
-          <span>
-            En Michi Shop, nos dedicamos a ofrecer todo lo que tu michi necesita
-            para vivir feliz y saludable. Aquí encontrarás una amplia variedad
-            de productos, desde alimentos nutritivos hasta juguetes divertidos,
-            rascadores, camas acogedoras, y accesorios modernos. Todo está
-            pensado para que tu michi reciba el mejor cuidado y disfrute de cada
-            momento. ¡Porque en Michi Shop, tu michi es nuestra prioridad!
-          </span>
-        </div>
+        
+        <div class="info2-container">
+          <div class="info2">
+            <span>
+              En Michi Shop, nos dedicamos a ofrecer todo lo que tu michi
+              necesita para vivir feliz y saludable. Aquí encontrarás una amplia
+              variedad de productos, desde alimentos nutritivos hasta juguetes
+              divertidos, rascadores, camas acogedoras, y accesorios modernos.
+              Todo está pensado para que tu michi reciba el mejor cuidado y
+              disfrute de cada momento. ¡Porque en Michi Shop, tu michi es
+              nuestra prioridad!
+            </span>
+          </div>
+        </div>        
       </div>
       <div id="product-view">
         <h2 class="product-view-title">Conoce nuestros productos</h2>
@@ -129,5 +138,6 @@
         });
     </script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>

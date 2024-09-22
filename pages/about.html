@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
   </head>
   <body>
     <header id="header">
@@ -38,20 +39,25 @@
 
     <main>
       <div id="info">
-        <div class="info1">
-          <img src="../images/michi-info.webp" alt="michi-info" />
+        <div class="info1-container">
+          <div class="info1">
+            <img src="/images/michi-info.webp" alt="michi-info" />
+          </div>
         </div>
-        <div class="info2">
-          <span>
-            En Michi Shop, nos especializamos en proporcionar todo lo que tu
-            michi necesita para vivir de manera feliz y saludable. Aquí
-            encontrarás una amplia selección de productos, desde alimentos
-            nutritivos hasta juguetes divertidos, rascadores, camas acogedoras y
-            accesorios modernos. Cada detalle está pensado para que tu michi
-            reciba el mejor cuidado y disfrute de cada momento. ¡Porque en Michi
-            Shop, el bienestar de tu michi es nuestra prioridad!
-          </span>
-        </div>
+        
+        <div class="info2-container">
+          <div class="info2">
+            <span>
+              En Michi Shop, nos dedicamos a ofrecer todo lo que tu michi
+              necesita para vivir feliz y saludable. Aquí encontrarás una amplia
+              variedad de productos, desde alimentos nutritivos hasta juguetes
+              divertidos, rascadores, camas acogedoras, y accesorios modernos.
+              Todo está pensado para que tu michi reciba el mejor cuidado y
+              disfrute de cada momento. ¡Porque en Michi Shop, tu michi es
+              nuestra prioridad!
+            </span>
+          </div>
+        </div>        
       </div>
       <!-- Contenido aquí -->
       <div id="form-container">
@@ -114,5 +120,6 @@
           menuOptions.classList.toggle("show");
         });
     </script>
+    <script src="../js/animations.js"></script>
   </body>
 </html>

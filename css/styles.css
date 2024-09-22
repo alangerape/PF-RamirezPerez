@@ -346,6 +346,15 @@
   transform: rotate(10deg);
 }
 
+.info1, .info2 {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.animate__animated {
+  opacity: 1;
+}
+
 /* SCSS Productos */
 #product-view {
   display: flex;
@@ -414,31 +423,6 @@
 #product-view .product-img:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-#product-view .card-img-top {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-#product-view .img-bg-1 {
-  background-image: url("../../images/7.webp") !important;
-}
-#product-view .img-bg-2 {
-  background-image: url("../../images/8.webp");
-}
-#product-view .img-bg-3 {
-  background-image: url("../../images/9.webp");
-}
-#product-view .img-bg-4 {
-  background-image: url("../../images/10.webp");
-}
-#product-view .img-bg-5 {
-  background-image: url("../../images/11.webp");
-}
-#product-view .img-bg-6 {
-  background-image: url("../../images/13.webp");
 }
 
 /* SCSS main */
