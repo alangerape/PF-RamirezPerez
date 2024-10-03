@@ -20,23 +20,25 @@
   </head>
   <body>
     <header id="header">
-      <a href="./index.html"
-        ><img class="header-logo" src="/Images/logo-cats.webp" alt="logo"
-      /></a>
+      <a href="./index.html">
+        <img class="header-logo" src="../images/logo-cats.webp" alt="logo" />
+      </a>
       <nav id="header-navbar">
+        <!-- Botón hamburguesa -->
         <button class="menu-toggle" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
+    
+        <!-- Menú de opciones -->
         <ul class="menu-options">
-          <li><a class="option" href="/index.html">Inicio</a></li>
-          <li><a class="option" href="../pages/about.html">Nosotros</a></li>
-          <li><a class="option" href="../pages/products.html">Productos</a></li>
-          <li><a class="option" href="../pages/gallery.html">Galería</a></li>
-          <li><a class="option" href="../pages/contact.html">Contacto</a></li>
+          <li><a class="option" href="../index.html">Inicio</a></li>
+          <li><a class="option" href="./pages/about.html">Nosotros</a></li>
+          <li><a class="option" href="./pages/products.html">Productos</a></li>
+          <li><a class="option" href="./pages/gallery.html">Galería</a></li>
+          <li><a class="option" href="./pages/contact.html">Contacto</a></li>
         </ul>
       </nav>
-    </header>
-
+    </header>    
     <main>
       <!-- Contenido principal -->
       <div id="main-bg">
@@ -56,7 +58,7 @@
       <div id="info">
         <div class="info1-container">
           <div class="info1">
-            <img src="Images/michi-info.webp" alt="michi-info" />
+            <img src="images/michi-info.webp" alt="michi-info" />
           </div>
         </div>
         
@@ -75,12 +77,12 @@
         </div>        
       </div>
       <div id="product-view">
-        <h2 class="product-view-title">Conoce nuestros productos</h2>
+        <h3 class="product-view-title">Conoce nuestros productos</h3>
         <table class="product-tbl">
           <tbody>
             <tr>
               <td>
-                <h3 class="product-title">Cama rascadora</h3>
+                <h4 class="product-title">Cama rascadora</h4>
                 <p class="product-desc">
                   Casa cama plegable con cojín suave para gatitos hecho de
                   tejido de poliéster ligero y resistente.
@@ -89,7 +91,7 @@
               </td>
               <td>
                 <img
-                  src="/Images/product.webp"
+                  src="/images/product.webp"
                   alt="product"
                   class="product-img"
                 />
@@ -105,19 +107,19 @@
     <footer id="footer">
       <div class="footer-column">
         <a href="./index.html"
-          ><img class="header-logo" src="/Images/logo-cats.webp" alt="logo"
+          ><img class="header-logo" src="/images/logo-cats.webp" alt="logo"
         /></a>
       </div>
       <div class="footer-column">
         <nav id="navbar-footer">
           <ul class="menu-footer">
-            <li><a class="option" href="/index.html">Inicio</a></li>
-            <li><a class="option" href="../pages/about.html">Nosotros</a></li>
+            <li><a class="option" href="../index.html">Inicio</a></li>
+            <li><a class="option" href="./pages/about.html">Nosotros</a></li>
             <li>
-              <a class="option" href="../pages/products.html">Productos</a>
+              <a class="option" href="./pages/products.html">Productos</a>
             </li>
-            <li><a class="option" href="../pages/gallery.html">Galería</a></li>
-            <li><a class="option" href="../pages/contact.html">Contacto</a></li>
+            <li><a class="option" href="./pages/gallery.html">Galería</a></li>
+            <li><a class="option" href="./pages/contact.html">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -130,13 +132,12 @@
       </div>
     </footer>
     <script>
-      document
-        .querySelector(".menu-toggle")
-        .addEventListener("click", function () {
-          const menuOptions = document.querySelector(".menu-options");
-          menuOptions.classList.toggle("show");
-        });
-    </script>
+document.querySelector(".menu-toggle").addEventListener("click", function () {
+  const menuOptions = document.querySelector(".menu-options");
+  menuOptions.classList.toggle("show");
+});
+
+    </script>    
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/animations.js"></script>
   </body>

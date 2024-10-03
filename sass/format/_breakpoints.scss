@@ -63,11 +63,12 @@ $padding-lg: 30px;
   }
 
   #info {
-    padding: $padding-md 0;
+    padding-left: $padding-md;
 
     .info1,
     .info2 {
       width: 100%;
+      margin-right: 20px;
       margin-top: $padding-sm;
       padding: $padding-md;
     }
